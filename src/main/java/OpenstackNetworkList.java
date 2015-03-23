@@ -8,11 +8,11 @@ public class OpenstackNetworkList {
     public static void main(String[] args) {
 
         NeutronApi neutronApi = ContextBuilder.newBuilder(new NeutronApiMetadata())
-                .credentials("desktop:zomb-prj-293", "LSkfs123FSmg")
-                .endpoint("http://identity.haze.yandex-team.ru/v2.0")
+                .credentials("TENANT:USERNAME", "PASSWORD")
+                .endpoint("YOUR_ENDPOINT_URL")
                 .buildApi(NeutronApi.class);
 
-        System.out.println(neutronApi.getNetworkApi("sas").list());
+        System.out.println(neutronApi.getNetworkApi("REGION").list());
 
     }
 }
